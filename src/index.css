@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bkg: 210deg 40% 98%;
+    --color-content: 217deg 32.6% 17.5%;
+    --color-accent1: 288deg 95.8% 90.6%;
+    --color-accent2: 168deg 83.8% 78.2%;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bkg: 217deg 32.6% 17.5%;
+      --color-content: 210deg 40% 98%;
+      --color-accent1: 288deg 95.8% 60.6%;
+      --color-accent2: 168deg 83.8% 48.2%;
+    }
+  }
+  :root[data-theme="dark"] {
+    --color-bkg: 217deg 32.6% 17.5%;
+    --color-content: 210deg 40% 98%;
+    --color-accent1: 288deg 95.8% 60.6%;
+    --color-accent2: 168deg 83.8% 48.2%;
+  }
+  :root[data-theme="cool"] {
+    --color-bkg: 217deg 32.6% 57.5%;
+    --color-content: 210deg 40% 38%;
+    --color-accent1: 288deg 95.8% 80.6%;
+    --color-accent2: 168deg 83.8% 48.2%;
+  }
+}
